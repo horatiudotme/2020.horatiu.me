@@ -13,7 +13,8 @@ class HomeFeaturesTab extends StatelessWidget {
                 child: ListTile(
                   title: Text(
                     'My works and I have been featured on',
-                    style: Theme.of(context).textTheme.button,
+                    // style: Theme.of(context).textTheme.subtitle1.copyWith(fontWeight: FontWeight.w900),
+                    style: Theme.of(context).textTheme.subtitle1.copyWith(fontWeight: FontWeight.bold),
                   ),
                 ),
               )

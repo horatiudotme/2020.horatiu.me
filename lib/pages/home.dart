@@ -27,7 +27,7 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final bool isPortrait = MediaQuery.of(context).size.height >= 500;
+    final bool isPortrait = MediaQuery.of(context).size.height >= 500;
 
     return DefaultTabController(
       length: 3,
@@ -42,7 +42,7 @@ class MyHomePage extends StatelessWidget {
             HomeFeaturesTab(),
           ],
         ),
-        floatingActionButton: _buildFAB(),
+        floatingActionButton: _buildFABs(isPortrait),
       ),
     );
   }
@@ -67,10 +67,10 @@ class MyHomePage extends StatelessWidget {
           tooltip: 'Share',
           onPressed: () {},
         ),
-        PopupMenuButton<MenuAction>(
-          onSelected: popupMenuSelection,
-          itemBuilder: _buildMenuItems,
-        ),
+        // PopupMenuButton<MenuAction>(
+        //   onSelected: popupMenuSelection,
+        //   itemBuilder: _buildMenuItems,
+        // ),
       ],
       bottom: TabBar(
         tabs: [
@@ -115,7 +115,7 @@ class MyHomePage extends StatelessWidget {
         FloatingActionButton(
           onPressed: () => {},
           // tooltip: AppStrings.incrementTooltip,
-          child: const Icon(Icons.add),
+          child: const Icon(Icons.link),
         )
       ],
     );

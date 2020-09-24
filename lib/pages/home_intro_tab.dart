@@ -7,6 +7,7 @@ class HomeIntroTab extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(32.0),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         // mainAxisAlignment: MainAxisAlignment.center,
         children: _buildTextContent(context),
       ),
@@ -15,7 +16,10 @@ class HomeIntroTab extends StatelessWidget {
 
   List<Widget> _buildTextContent(BuildContext context) {
     return [
-      CircleAvatar(backgroundImage: AssetImage('images/horatiu.jpg'), radius: 48.0,),
+      CircleAvatar(
+        backgroundImage: AssetImage('images/horatiu.jpg'),
+        radius: 48.0,
+      ),
 
       // ListTile(
       //   leading: CircleAvatar(backgroundImage: AssetImage('images/horatiu2.png')),
@@ -32,9 +36,14 @@ class HomeIntroTab extends StatelessWidget {
       // Image(
       //   image: AssetImage('images/horatiu2.png'),
       // ),
+      SizedBox(height: 32.0),
+      Text('I create hello world programs', style: Theme.of(context).textTheme.headline5),
       SizedBox(height: 16.0),
-      Text('I create software products, programs, apps, sites, poems, and real and virtual software companies',
-          style: Theme.of(context).textTheme.headline5),
+      Text(
+        'I also create software products, apps, sites, poems, and real and virtual software companies',
+        style: Theme.of(context).textTheme.headline5,
+        textAlign: TextAlign.center,
+      ),
       // SizedBox(height: 16.0),
       // Text.rich(
       //   TextSpan(
