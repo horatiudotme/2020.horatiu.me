@@ -1,16 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:horatiu_me/common/app_strings.dart';
+import 'package:horatiu_me/pages/home_features_tab.dart';
+import 'package:horatiu_me/pages/home_words_tab.dart';
 import 'package:horatiu_me/widgets/link_text_span.dart';
 
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(AppStrings.siteName),
+    final bool isPortrait = MediaQuery.of(context).size.height >= 500;
+
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(AppStrings.siteName),
+          bottom: TabBar(
+            tabs: [
+              Tab(
+                text: 'intro',
+              ),
+              Tab(
+                text: 'words',
+              ),
+              Tab(
+                text: 'features',
+              ),
+            ],
+          ),
+        ),
+        drawer: Drawer(),
+        body: TabBarView(
+          children: [
+            _buildBody(),
+            HomeWordsTab(),
+            HomeFeaturesTab(),
+          ],
+        ),
+        floatingActionButton: _buildFABs(isPortrait),
       ),
-      drawer: Drawer(),
-      body: _buildBody(),
     );
   }
 
@@ -18,6 +45,7 @@ class MyHomePage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(32.0),
       child: Column(
+        // mainAxisAlignment: MainAxisAlignment.center,
         children: _buildTextContent(),
       ),
     );
@@ -25,8 +53,8 @@ class MyHomePage extends StatelessWidget {
 
   List<Widget> _buildTextContent() {
     return [
-      RichText(
-        text: TextSpan(
+      Text.rich(
+        TextSpan(
           text: 'cofounder of ',
           children: [
             LinkTextSpan(text: 'East-Tec, ', url: 'https://www.east-tec.com'),
@@ -45,8 +73,8 @@ class MyHomePage extends StatelessWidget {
         ),
       ),
       SizedBox(height: 16.0),
-      RichText(
-        text: TextSpan(
+      Text.rich(
+        TextSpan(
           text: 'founder of ',
           children: [
             LinkTextSpan(text: 'Appgramming, ', url: 'https://www.appgramming.com'),
@@ -77,8 +105,8 @@ class MyHomePage extends StatelessWidget {
         ),
       ),
       SizedBox(height: 16.0),
-      RichText(
-        text: TextSpan(
+      Text.rich(
+        TextSpan(
           text: 'cofounder of ',
           children: [
             LinkTextSpan(text: 'Rotary Club 1113 Oradea, ', url: 'https://rotary1113.ro/'),
@@ -92,5 +120,26 @@ class MyHomePage extends StatelessWidget {
         ),
       ),
     ];
+  }
+
+  /// Builds the two main floating action buttons for increment and decrement.
+  Widget _buildFABs(bool isPortrait) {
+    return Flex(
+      direction: isPortrait ? Axis.vertical : Axis.horizontal,
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: <Widget>[
+        FloatingActionButton(
+          onPressed: () => {},
+          // tooltip: AppStrings.decrementTooltip,
+          child: const Icon(Icons.email_outlined),
+        ),
+        isPortrait ? const SizedBox(height: 16.0) : const SizedBox(width: 16.0),
+        FloatingActionButton(
+          onPressed: () => {},
+          // tooltip: AppStrings.incrementTooltip,
+          child: const Icon(Icons.add),
+        )
+      ],
+    );
   }
 }

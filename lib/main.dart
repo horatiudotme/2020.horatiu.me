@@ -16,6 +16,8 @@ class HoratiuDotMeSite extends StatelessWidget {
       title: AppStrings.siteName,
       theme: ThemeData(
         brightness: Brightness.dark,
+        accentColor: Colors.black,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(),
     );
