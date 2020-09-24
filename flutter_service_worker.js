@@ -3,16 +3,16 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "main.dart.js": "ba7725bd00ed2d1d7d99c010bf7118a6",
+  "main.dart.js": "b13e541b5eb770862e33917cfd78420f",
 "assets/NOTICES": "9b3dae82b92517c2785dfb480a51dcbc",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "b14fcf3ee94e3ace300b192e9e7c8c5d",
 "assets/fonts/MaterialIcons-Regular.otf": "a68d2a28c526b3b070aefca4bac93d25",
-"assets/assets/images/horatiu.jpg": "5014bfaad019d254cab226fa15895f7a",
-"assets/AssetManifest.json": "0f100fa694097098ab2725461787b6dc",
+"assets/images/horatiu.jpg": "5014bfaad019d254cab226fa15895f7a",
+"assets/AssetManifest.json": "af8fd7dd4abdea099589576650ccad5d",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"index.html": "0b66aeb5877e4d4575d2b63fb9ca2a92",
-"/": "0b66aeb5877e4d4575d2b63fb9ca2a92",
+"index.html": "6e651dbd7e85b443a50569028b5830c1",
+"/": "6e651dbd7e85b443a50569028b5830c1",
 "manifest.json": "049086e3e5e1c9d16ec957aa03e656d7",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1"
