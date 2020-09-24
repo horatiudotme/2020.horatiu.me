@@ -1,125 +1,100 @@
 import 'package:flutter/material.dart';
 import 'package:horatiu_me/common/app_strings.dart';
 import 'package:horatiu_me/pages/home_features_tab.dart';
+import 'package:horatiu_me/pages/home_intro_tab.dart';
 import 'package:horatiu_me/pages/home_words_tab.dart';
 import 'package:horatiu_me/widgets/link_text_span.dart';
 
+/// Overflow menu items enumeration.
+enum MenuAction { reset, share, rate, help }
+
 class MyHomePage extends StatelessWidget {
+  /// Performs the tasks of the popup menu items (reset, share, rate, and help).
+  void popupMenuSelection(MenuAction item) {
+    switch (item) {
+      case MenuAction.reset:
+        break;
+      case MenuAction.share:
+        break;
+      case MenuAction.rate:
+        break;
+      case MenuAction.help:
+        break;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    final bool isPortrait = MediaQuery.of(context).size.height >= 500;
+    // final bool isPortrait = MediaQuery.of(context).size.height >= 500;
 
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        appBar: AppBar(
-          title: Text(AppStrings.siteName),
-          bottom: TabBar(
-            tabs: [
-              Tab(
-                text: 'intro',
-              ),
-              Tab(
-                text: 'words',
-              ),
-              Tab(
-                text: 'features',
-              ),
-            ],
-          ),
-        ),
+        appBar: _buildAppBar(),
         drawer: Drawer(),
         body: TabBarView(
           children: [
-            _buildBody(),
+            HomeIntroTab(),
             HomeWordsTab(),
             HomeFeaturesTab(),
           ],
         ),
-        floatingActionButton: _buildFABs(isPortrait),
+        floatingActionButton: _buildFAB(),
       ),
     );
   }
 
-  Widget _buildBody() {
-    return Padding(
-      padding: const EdgeInsets.all(32.0),
-      child: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        children: _buildTextContent(),
+  /// Builds the app bar with the popup menu items.
+  PreferredSizeWidget _buildAppBar() {
+    return AppBar(
+      // titleSpacing: 0,
+      title: Text(AppStrings.siteName),
+      // title: Row(
+      //   children: [
+      //     CircleAvatar(backgroundImage: AssetImage('images/horatiu2.png')),
+      //     SizedBox(width: 8.0),
+      //     Text(AppStrings.siteName),
+      //   ],
+      // ),
+      actions: [
+        IconButton(
+          icon: const Icon(Icons.share),
+          // icon: CircleAvatar(backgroundImage: AssetImage('images/horatiu-48.png'), ),
+          // icon: Image(image: AssetImage('images/horatiu2.png'), ),
+          tooltip: 'Share',
+          onPressed: () {},
+        ),
+        PopupMenuButton<MenuAction>(
+          onSelected: popupMenuSelection,
+          itemBuilder: _buildMenuItems,
+        ),
+      ],
+      bottom: TabBar(
+        tabs: [
+          Tab(
+            text: 'intro',
+          ),
+          Tab(
+            text: 'words',
+          ),
+          Tab(
+            text: 'features',
+          ),
+        ],
       ),
     );
   }
 
-  List<Widget> _buildTextContent() {
-    return [
-      Text.rich(
-        TextSpan(
-          text: 'cofounder of ',
-          children: [
-            LinkTextSpan(text: 'East-Tec, ', url: 'https://www.east-tec.com'),
-            LinkTextSpan(text: 'Cyberscrub Technologies, ', url: 'https://www.cyberscrub.com'),
-            TextSpan(text: 'and original creator of '),
-            LinkTextSpan(text: 'east-tec Eraser, ', url: 'https://www.east-tec.com/eraser/'),
-            LinkTextSpan(text: 'east-tec DisposeSecure, ', url: 'http://www.east-tec.com/disposesecure/'),
-            LinkTextSpan(
-                text: 'east-tec FormatSecure, ',
-                url: 'https://web.archive.org/web/20050509180501/http://www.east-tec.com/formatsc/'),
-            LinkTextSpan(
-                text: 'diskSpace Explorer, ',
-                url: 'https://web.archive.org/web/20060406190416/http://www.east-tec.com/diskmanager/'),
-            TextSpan(text: 'and other products'),
-          ],
-        ),
-      ),
-      SizedBox(height: 16.0),
-      Text.rich(
-        TextSpan(
-          text: 'founder of ',
-          children: [
-            LinkTextSpan(text: 'Appgramming, ', url: 'https://www.appgramming.com'),
-            LinkTextSpan(text: 'Aurelitec, ', url: 'https://www.aurelitec.com'),
-            LinkTextSpan(text: 'Tecdrop, ', url: 'https://www.tecdrop.com'),
-            TextSpan(text: 'and creator of '),
-            LinkTextSpan(
-                text: 'Add/Remove Plus!, ',
-                url: 'https://web.archive.org/web/20041011051204/http://www.aurelitec.com/software/arplus/'),
-            LinkTextSpan(text: 'CinemaDrape, ', url: 'https://www.aurelitec.com/cinemadrape/'),
-            LinkTextSpan(text: 'Colortypist, ', url: 'https://www.aurelitec.com/colortypist/'),
-            LinkTextSpan(text: 'ColorVeil, ', url: 'https://www.aurelitec.com/colorveil/'),
-            LinkTextSpan(text: 'FrameDummy, ', url: 'http://www.appgramming.com/framedummy/'),
-            LinkTextSpan(text: 'HTMtied, ', url: 'http://www.aurelitec.com/htmtied/'),
-            LinkTextSpan(text: 'InjuredPixels, ', url: 'http://www.aurelitec.com/injuredpixels/'),
-            LinkTextSpan(text: 'ISeePass, ', url: 'http://www.tecdrop.com/iseepass/'),
-            LinkTextSpan(text: 'LoneColor, ', url: 'http://www.appgramming.com/lonecolor/'),
-            LinkTextSpan(text: 'Pitch Black Wallpaper, ', url: 'http://www.tecdrop.com/pitchblackwallpaper/'),
-            LinkTextSpan(text: 'PixelHealer, ', url: 'http://www.aurelitec.com/pixelhealer/'),
-            LinkTextSpan(text: 'RGB Color Wallpaper, ', url: 'http://www.tecdrop.com/rgbcolorwallpaper/'),
-            LinkTextSpan(text: 'Thumbico, ', url: 'http://www.aurelitec.com/thumbico/'),
-            LinkTextSpan(text: 'WhatsMyCo, ', url: 'http://www.aurelitec.com/whatsmyco/'),
-            LinkTextSpan(
-                text: 'Whats On My Computer, ',
-                url: 'https://web.archive.org/web/20040622013006/http://www.whatsonmycomputer.com/'),
-            TextSpan(text: 'and other programs and apps'),
-          ],
-        ),
-      ),
-      SizedBox(height: 16.0),
-      Text.rich(
-        TextSpan(
-          text: 'cofounder of ',
-          children: [
-            LinkTextSpan(text: 'Rotary Club 1113 Oradea, ', url: 'https://rotary1113.ro/'),
-            TextSpan(text: 'cofounder/past president of '),
-            LinkTextSpan(text: 'Rotaract Club Oradea, ', url: 'https://www.facebook.com/rotaractoradea/'),
-            LinkTextSpan(text: 'tedx', url: 'https://www.ted.com/about/programs-initiatives/tedx-program'),
-            TextSpan(text: ' and '),
-            LinkTextSpan(text: 'ixperiment', url: 'http://ixperiment.ro/'),
-            TextSpan(text: ' speaker '),
-          ],
-        ),
-      ),
-    ];
+  /// Builds the popup menu items for the app bar.
+  List<PopupMenuItem<MenuAction>> _buildMenuItems(BuildContext context) {
+    return MenuAction.values
+        .map(
+          (item) => PopupMenuItem<MenuAction>(
+            value: item,
+            child: Text(AppStrings.menuActions[item]),
+          ),
+        )
+        .toList();
   }
 
   /// Builds the two main floating action buttons for increment and decrement.
@@ -140,6 +115,22 @@ class MyHomePage extends StatelessWidget {
           child: const Icon(Icons.add),
         )
       ],
+    );
+  }
+
+  Widget _buildFAB() {
+    return FloatingActionButton.extended(
+      onPressed: () {},
+      icon: const Icon(Icons.contact_page_outlined),
+      // icon: Padding(
+      //   padding: const EdgeInsets.only(top: 8.0),
+      //   child: const Image(
+      //     image: AssetImage('images/horatiu2.png'),
+      //     width: 48,
+      //   ),
+      // ),
+      // icon: CircleAvatar(backgroundImage: AssetImage('images/horatiu2.png')),
+      label: Text('Contact'),
     );
   }
 }
