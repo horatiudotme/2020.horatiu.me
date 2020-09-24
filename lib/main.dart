@@ -15,9 +15,15 @@ class HoratiuDotMeSite extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: AppStrings.siteName,
       theme: ThemeData(
+        // primaryColor: Colors.black,
         primaryColor: Colors.black,
-        accentColor: Color(0xFF0983d3),
-        // brightness: Brightness.dark,
+        // accentColor: Color(0xFF0983d3),
+        // accentColor: Colors.lightBlue,
+        accentColor: Colors.white,
+        // accentColor: Colors.black,
+
+        canvasColor: Colors.black,
+        brightness: Brightness.dark,
         // accentColor: Colors.black,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),

@@ -5,6 +5,8 @@ import 'package:horatiu_me/pages/home_intro_tab.dart';
 import 'package:horatiu_me/pages/home_words_tab.dart';
 import 'package:horatiu_me/widgets/link_text_span.dart';
 
+import 'home_works_tab.dart';
+
 /// Overflow menu items enumeration.
 enum MenuAction { reset, share, rate, help }
 
@@ -35,7 +37,8 @@ class MyHomePage extends StatelessWidget {
         body: TabBarView(
           children: [
             HomeIntroTab(),
-            HomeWordsTab(),
+            // HomeWordsTab(),
+            HomeWorksTab(),
             HomeFeaturesTab(),
           ],
         ),
@@ -72,13 +75,13 @@ class MyHomePage extends StatelessWidget {
       bottom: TabBar(
         tabs: [
           Tab(
-            text: 'intro',
+            text: 'Intro',
           ),
           Tab(
-            text: 'words',
+            text: 'Works',
           ),
           Tab(
-            text: 'features',
+            text: 'Features',
           ),
         ],
       ),
