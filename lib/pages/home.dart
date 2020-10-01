@@ -3,6 +3,7 @@ import 'package:horatiu_me/common/app_strings.dart';
 import 'package:horatiu_me/pages/home_features_tab.dart';
 import 'package:horatiu_me/pages/home_intro_tab.dart';
 import 'package:horatiu_me/pages/home_words_tab.dart';
+import 'package:horatiu_me/widgets/link_list_tile.dart';
 import 'package:horatiu_me/widgets/link_text_span.dart';
 
 import 'home_works_tab.dart';
@@ -27,13 +28,13 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool isPortrait = MediaQuery.of(context).size.height >= 500;
+    // final bool isPortrait = MediaQuery.of(context).size.height >= 500;
 
     return DefaultTabController(
       length: 3,
       child: Scaffold(
         appBar: _buildAppBar(),
-        drawer: Drawer(),
+        drawer: _buildDrawer(context),
         body: TabBarView(
           children: [
             HomeIntroTab(),
@@ -42,7 +43,7 @@ class MyHomePage extends StatelessWidget {
             HomeFeaturesTab(),
           ],
         ),
-        floatingActionButton: _buildFABs(isPortrait),
+        floatingActionButton: _buildFAB(),
       ),
     );
   }
@@ -100,6 +101,46 @@ class MyHomePage extends StatelessWidget {
         .toList();
   }
 
+  Widget _buildDrawer(BuildContext context) {
+    return Drawer(
+      child: ListView(
+        children: <Widget>[
+          DrawerHeader(
+            child: Text(
+              'Links',
+              style: Theme.of(context).textTheme.headline6,
+            ),
+            // decoration: BoxDecoration(
+            //   color: Colors.black,
+            // ),
+          ),
+          LinkListTile(
+            title: Text('horatiu.collects.reviews'),
+            url: 'https://horatiu.collects.reviews',
+          ),
+          LinkListTile(
+            title: Text('poezii.horatiu.me'),
+            url: 'https://poezii.horatiu.me',
+          ),
+          LinkListTile(
+            title: Text('7.00 – 7.53 AM'),
+            url: 'https://web.archive.org/web/20091022095316/http://www.700753am.com/',
+          ),
+          Divider(),
+          LinkListTile(
+            title: Text('LinkedIn'),
+            url: 'https://www.linkedin.com/in/horatiudotme',
+          ),
+          LinkListTile(
+            title: Text('Facebook'),
+            url: 'https://www.facebook.com/horatiu.me',
+          ),
+          // Divider(),
+        ],
+      ),
+    );
+  }
+
   /// Builds the two main floating action buttons for increment and decrement.
   Widget _buildFABs(bool isPortrait) {
     return Flex(
@@ -122,9 +163,9 @@ class MyHomePage extends StatelessWidget {
   }
 
   Widget _buildFAB() {
-    return FloatingActionButton.extended(
+    return FloatingActionButton(
       onPressed: () {},
-      icon: const Icon(Icons.contact_page_outlined),
+      child: const Icon(Icons.email_outlined),
       // icon: Padding(
       //   padding: const EdgeInsets.only(top: 8.0),
       //   child: const Image(
@@ -133,7 +174,6 @@ class MyHomePage extends StatelessWidget {
       //   ),
       // ),
       // icon: CircleAvatar(backgroundImage: AssetImage('images/horatiu2.png')),
-      label: Text('Contact'),
     );
   }
 }
