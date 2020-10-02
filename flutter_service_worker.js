@@ -12,8 +12,8 @@ const RESOURCES = {
 "assets/images/horatiu.jpg": "5014bfaad019d254cab226fa15895f7a",
 "assets/AssetManifest.json": "fc1f23b16f6bfa66e85c33a3e9df97c5",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"index.html": "2b6b00b9ebd023bcd657afb505f79398",
-"/": "2b6b00b9ebd023bcd657afb505f79398",
+"index.html": "a985016084258b49d710a3329728251a",
+"/": "a985016084258b49d710a3329728251a",
 "manifest.json": "049086e3e5e1c9d16ec957aa03e656d7",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1"
