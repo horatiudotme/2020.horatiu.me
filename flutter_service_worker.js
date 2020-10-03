@@ -3,20 +3,20 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "main.dart.js": "07783f8fdecb62c8ca9e1b97042453b7",
+  "main.dart.js": "65c760187f07e7e1362350204513af7b",
 "assets/NOTICES": "53e17624fac3c6e9f9b1c3e0eec6c568",
 "assets/FontManifest.json": "7b3b848aed509ecd684cc2f89aaf4e31",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "b14fcf3ee94e3ace300b192e9e7c8c5d",
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
 "assets/fonts/CustomIcons.ttf": "745ad9678ee92fadb5b3e7e3f049b8a6",
-"assets/images/horatiu.jpg": "5014bfaad019d254cab226fa15895f7a",
-"assets/AssetManifest.json": "fc1f23b16f6bfa66e85c33a3e9df97c5",
-"favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"index.html": "a985016084258b49d710a3329728251a",
-"/": "a985016084258b49d710a3329728251a",
-"manifest.json": "049086e3e5e1c9d16ec957aa03e656d7",
-"icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1"
+"assets/images/horatiu-tanescu.png": "cad475fc4aba4dca506e4d10c0e5a869",
+"assets/AssetManifest.json": "d91ede91ab2bde8728f80e3edcc98f86",
+"favicon.png": "ac523efa4c4e0123906627323dad6c09",
+"index.html": "f63def9bb073eb5855f415d99ad604e2",
+"/": "f63def9bb073eb5855f415d99ad604e2",
+"manifest.json": "165b930e2b352c9d1fc833dd18ff63c5",
+"icons/horatiu-tanescu-192.png": "cad475fc4aba4dca506e4d10c0e5a869",
+"icons/horatiu-tanescu-512.png": "8853fe9143ef4e4e31bda8898a717868"
 };
 
 // The application shell files that are downloaded before a service worker can
