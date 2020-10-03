@@ -12,7 +12,7 @@ class HomeIntroTab extends StatelessWidget {
           children: [
             Center(
               child: CircleAvatar(
-                backgroundImage: AssetImage('images/horatiu.jpg'),
+                backgroundImage: AssetImage('images/horatiu-tanescu.png'),
                 radius: 48.0,
               ),
             ),

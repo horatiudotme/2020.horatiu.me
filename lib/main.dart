@@ -16,6 +16,7 @@ class HoratiuDotMeSite extends StatelessWidget {
       title: AppStrings.siteName,
       theme: ThemeData(
         primaryColor: Colors.black,
+        primaryColorDark: Colors.black,
         // primaryColor: Color(0xFF0983d3),
         // accentColor: Color(0xFF0983d3),
         // accentColor: Colors.lightBlue,

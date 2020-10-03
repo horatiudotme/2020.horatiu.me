@@ -15,7 +15,8 @@ class MyHomePage extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: _buildAppBar(),
-        drawer: _buildDrawer(context),
+        // drawer: _buildDrawer(context),
+        endDrawer: _buildDrawer(context),
         body: TabBarView(
           children: [
             HomeIntroTab(),
@@ -34,11 +35,11 @@ class MyHomePage extends StatelessWidget {
     return AppBar(
       title: Text(AppStrings.siteName),
       actions: [
-        IconButton(
-          icon: const Icon(Icons.new_releases),
-          tooltip: AppStrings.newTooltip,
-          onPressed: () => launchUrl(AppStrings.newUrl),
-        ),
+        // IconButton(
+        //   icon: const Icon(Icons.new_releases),
+        //   tooltip: AppStrings.newTooltip,
+        //   onPressed: () => launchUrl(AppStrings.newUrl),
+        // ),
       ],
       bottom: TabBar(
         tabs: [

@@ -1,21 +1,21 @@
 {
-    "name": "horatiu_me",
-    "short_name": "horatiu_me",
+    "name": "horatiu.me",
+    "short_name": "horatiu.me",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter application.",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "description": "Hello, World! I am Horațiu (Aurelian) Tănescu, and I create Hello World programs.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
         {
-            "src": "icons/Icon-192.png",
+            "src": "icons/horatiu-tanescu-192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "icons/Icon-512.png",
+            "src": "icons/horatiu-tanescu-512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
