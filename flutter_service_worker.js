@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "main.dart.js": "65c760187f07e7e1362350204513af7b",
+  "main.dart.js": "772ad86f383beb6aa88666cfea8f30d2",
 "assets/NOTICES": "53e17624fac3c6e9f9b1c3e0eec6c568",
 "assets/FontManifest.json": "7b3b848aed509ecd684cc2f89aaf4e31",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "b14fcf3ee94e3ace300b192e9e7c8c5d",
@@ -12,8 +12,8 @@ const RESOURCES = {
 "assets/images/horatiu-tanescu.png": "249edb3cf180cea3a75480a7fd4d82d6",
 "assets/AssetManifest.json": "d91ede91ab2bde8728f80e3edcc98f86",
 "favicon.png": "b8e60706c61ce13a639b5474df9d1f6a",
-"index.html": "9a4f8b002d9a05393130a6cd67d3bc6f",
-"/": "9a4f8b002d9a05393130a6cd67d3bc6f",
+"index.html": "04320a345fbb4b6a7d777c3a7cb6d089",
+"/": "04320a345fbb4b6a7d777c3a7cb6d089",
 "manifest.json": "165b930e2b352c9d1fc833dd18ff63c5",
 "icons/horatiu-tanescu-192.png": "6282777941e12e730c9e9bc0625e67cb",
 "icons/horatiu-tanescu-512.png": "94d6fff302f7cb8e62e6c1f1ae28a4ef"
