@@ -9,14 +9,14 @@ const RESOURCES = {
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "b14fcf3ee94e3ace300b192e9e7c8c5d",
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
 "assets/fonts/CustomIcons.ttf": "745ad9678ee92fadb5b3e7e3f049b8a6",
-"assets/images/horatiu-tanescu.png": "cad475fc4aba4dca506e4d10c0e5a869",
+"assets/images/horatiu-tanescu.png": "249edb3cf180cea3a75480a7fd4d82d6",
 "assets/AssetManifest.json": "d91ede91ab2bde8728f80e3edcc98f86",
-"favicon.png": "ac523efa4c4e0123906627323dad6c09",
-"index.html": "f63def9bb073eb5855f415d99ad604e2",
-"/": "f63def9bb073eb5855f415d99ad604e2",
+"favicon.png": "b8e60706c61ce13a639b5474df9d1f6a",
+"index.html": "b3505a983366c40756094aa4425b1193",
+"/": "b3505a983366c40756094aa4425b1193",
 "manifest.json": "165b930e2b352c9d1fc833dd18ff63c5",
-"icons/horatiu-tanescu-192.png": "cad475fc4aba4dca506e4d10c0e5a869",
-"icons/horatiu-tanescu-512.png": "8853fe9143ef4e4e31bda8898a717868"
+"icons/horatiu-tanescu-192.png": "6282777941e12e730c9e9bc0625e67cb",
+"icons/horatiu-tanescu-512.png": "94d6fff302f7cb8e62e6c1f1ae28a4ef"
 };
 
 // The application shell files that are downloaded before a service worker can
