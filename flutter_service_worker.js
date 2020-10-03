@@ -12,8 +12,8 @@ const RESOURCES = {
 "assets/images/horatiu-tanescu.png": "249edb3cf180cea3a75480a7fd4d82d6",
 "assets/AssetManifest.json": "d91ede91ab2bde8728f80e3edcc98f86",
 "favicon.png": "b8e60706c61ce13a639b5474df9d1f6a",
-"index.html": "b3505a983366c40756094aa4425b1193",
-"/": "b3505a983366c40756094aa4425b1193",
+"index.html": "9a4f8b002d9a05393130a6cd67d3bc6f",
+"/": "9a4f8b002d9a05393130a6cd67d3bc6f",
 "manifest.json": "165b930e2b352c9d1fc833dd18ff63c5",
 "icons/horatiu-tanescu-192.png": "6282777941e12e730c9e9bc0625e67cb",
 "icons/horatiu-tanescu-512.png": "94d6fff302f7cb8e62e6c1f1ae28a4ef"

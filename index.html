@@ -17,6 +17,16 @@
 
   <title>Horațiu Tănescu</title>
   <link rel="manifest" href="manifest.json">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254782-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-79254782-1');
+  </script>
 </head>
 <body>
   <!-- This script installs service_worker.js to provide PWA functionality to
@@ -25,10 +35,10 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=2276889248');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=189116542');
       });
     }
   </script>
-  <script src="main.dart.js?v=2276889248" type="application/javascript"></script>
+  <script src="main.dart.js?v=189116542" type="application/javascript"></script>
 </body>
 </html>
