@@ -3,18 +3,18 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "main.dart.js": "52f00c20899dda3c6f8d05e145174921",
-"assets/NOTICES": "53e17624fac3c6e9f9b1c3e0eec6c568",
-"assets/FontManifest.json": "7b3b848aed509ecd684cc2f89aaf4e31",
-"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "b14fcf3ee94e3ace300b192e9e7c8c5d",
-"assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
+  "assets/AssetManifest.json": "d91ede91ab2bde8728f80e3edcc98f86",
 "assets/fonts/CustomIcons.ttf": "745ad9678ee92fadb5b3e7e3f049b8a6",
+"assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
 "assets/images/horatiu-tanescu.png": "249edb3cf180cea3a75480a7fd4d82d6",
-"assets/AssetManifest.json": "d91ede91ab2bde8728f80e3edcc98f86",
+"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "b14fcf3ee94e3ace300b192e9e7c8c5d",
+"assets/FontManifest.json": "7b3b848aed509ecd684cc2f89aaf4e31",
+"assets/NOTICES": "53e17624fac3c6e9f9b1c3e0eec6c568",
 "favicon.png": "b8e60706c61ce13a639b5474df9d1f6a",
-"index.html": "1547b25ad1f9e71845c2d75fb0d8528d",
-"/": "1547b25ad1f9e71845c2d75fb0d8528d",
+"main.dart.js": "5a8cc1ddd18416d418d537d44ca290da",
 "manifest.json": "165b930e2b352c9d1fc833dd18ff63c5",
+"index.html": "7008dec8f71a4968a322a85f836cffa5",
+"/": "7008dec8f71a4968a322a85f836cffa5",
 "icons/horatiu-tanescu-192.png": "6282777941e12e730c9e9bc0625e67cb",
 "icons/horatiu-tanescu-512.png": "94d6fff302f7cb8e62e6c1f1ae28a4ef"
 };
