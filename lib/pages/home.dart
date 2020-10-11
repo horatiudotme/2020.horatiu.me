@@ -57,7 +57,7 @@ class MyHomePage extends StatelessWidget {
         children: <Widget>[
           DrawerHeader(
             child: Text(
-              'Links',
+              'More links',
               style: Theme.of(context).textTheme.headline6.copyWith(color: Colors.white),
             ),
             decoration: BoxDecoration(
@@ -72,9 +72,12 @@ class MyHomePage extends StatelessWidget {
           //   title: Text('7.00 – 7.53 AM'),
           //   url: 'https://web.archive.org/web/20091022095316/http://www.700753am.com/',
           // ),
-          // _buildLinkListTile(null, AppStrings.collectsReviewsTitle, AppStrings.collectsReviewsUrl),
-          // Divider(),
-          _buildLinkListTile(CustomIcons.github_circled, AppStrings.githubTitle, AppStrings.githubUrl),
+          _buildLinkListTile(null, AppStrings.collectsReviewsTitle, AppStrings.collectsReviewsUrl),
+          _buildLinkListTile(null, AppStrings.poeziiTitle, AppStrings.poeziiUrl),
+          _buildLinkListTile(null, AppStrings.book700753AMTitle, AppStrings.book700753AMUrl),
+          Divider(),
+          _buildLinkListTile(CustomIcons.github_circled, AppStrings.github1Title, AppStrings.github1Url),
+          _buildLinkListTile(CustomIcons.github_circled, AppStrings.github2Title, AppStrings.github2Url),
           _buildLinkListTile(CustomIcons.linkedin_circled, AppStrings.linkedinTitle, AppStrings.linkedinUrl),
           _buildLinkListTile(CustomIcons.facebook_circled, AppStrings.facebookTitle, AppStrings.facebookUrl),
         ],
