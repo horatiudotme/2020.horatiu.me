@@ -46443,7 +46443,7 @@ N9:function(a){var s=0,r=P.am(t.kN),q,p,o
 var $async$nh=P.ae(function(b,c){if(b===1)return P.aj(c,r)
 while(true)switch(s){case 0:o=B
 s=3
-return P.ay(T.a1l(a).TV("./data/features.yaml"),$async$nh)
+return P.ay(T.a1l(a).TV("data/features.yaml"),$async$nh)
 case 3:p=o.aeI(c,null).a
 q=p.gm(p)
 s=1
