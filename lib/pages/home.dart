@@ -13,7 +13,7 @@ class MyHomePage extends StatelessWidget {
   Future<YamlList> _loadFeatures(BuildContext context) async {
     final data = await DefaultAssetBundle.of(context).loadString('./data/features.yaml');
     final mapData = loadYaml(data);
-    print(mapData);
+    // print(mapData);
     // print(mapData.runtimeType);
     //
     // mapData.nodes.forEach((YamlNode node) {
@@ -42,7 +42,7 @@ class MyHomePage extends StatelessWidget {
               future: _loadFeatures(context),
               builder: (BuildContext context, AsyncSnapshot<YamlList> snapshot) {
                 if (snapshot.hasData) {
-                  return HomeFeaturesTab2(snapshot.data);
+                  return HomeFeaturesTab(snapshot.data);
                 } else {
                   return CircularProgressIndicator();
                 }
