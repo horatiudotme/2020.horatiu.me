@@ -11,7 +11,7 @@ import 'home_works_tab.dart';
 
 class MyHomePage extends StatelessWidget {
   Future<YamlList> _loadFeatures(BuildContext context) async {
-    final data = await DefaultAssetBundle.of(context).loadString('./data/features.yaml');
+    final data = await DefaultAssetBundle.of(context).loadString('data/features.yaml');
     final mapData = loadYaml(data);
     // print(mapData);
     // print(mapData.runtimeType);
