@@ -25,6 +25,6 @@ class AppStrings {
   static const String linkedinUrl = 'https://www.linkedin.com/in/horatiudotme';
 
   static const String facebookTitle = 'Facebook';
-  static const String facebookUrl = 'https://www.facebook.com/horatiu.me';
+  static const String facebookUrl = 'https://www.facebook.com/horatiuaurelian';
 
 }
