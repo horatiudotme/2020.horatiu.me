@@ -10,9 +10,10 @@ import 'package:yaml/yaml.dart';
 import 'home_works_tab.dart';
 
 class MyHomePage extends StatelessWidget {
-  Future<YamlList> _loadFeatures(BuildContext context) async {
-    final data = await DefaultAssetBundle.of(context).loadString('data/features.yaml');
-    final mapData = loadYaml(data);
+  Future<List> _loadFeatures(BuildContext context) async {
+    final data =
+        await DefaultAssetBundle.of(context).loadString('data/features.yaml');
+    final YamlList mapData = loadYaml(data);
     // print(mapData);
     // print(mapData.runtimeType);
     //
@@ -20,7 +21,11 @@ class MyHomePage extends StatelessWidget {
     //   print((node as YamlMap)['name']);
     // });
 
-    return mapData;
+    List shuffledData = List.from(mapData);
+    // shuffledData.shuffle();
+    return shuffledData;
+    // mapData.shuffle();
+    // return mapData;
   }
 
   @override
@@ -38,9 +43,9 @@ class MyHomePage extends StatelessWidget {
             HomeIntroTab(),
             // HomeWordsTab(),
             HomeWorksTab(),
-            FutureBuilder<YamlList>(
+            FutureBuilder<List>(
               future: _loadFeatures(context),
-              builder: (BuildContext context, AsyncSnapshot<YamlList> snapshot) {
+              builder: (BuildContext context, AsyncSnapshot<List> snapshot) {
                 if (snapshot.hasData) {
                   return HomeFeaturesTab(snapshot.data);
                 } else {
@@ -83,7 +88,10 @@ class MyHomePage extends StatelessWidget {
           DrawerHeader(
             child: Text(
               'More links',
-              style: Theme.of(context).textTheme.headline6.copyWith(color: Colors.white),
+              style: Theme.of(context)
+                  .textTheme
+                  .headline6
+                  .copyWith(color: Colors.white),
             ),
             decoration: BoxDecoration(
               color: Colors.black,
@@ -97,14 +105,21 @@ class MyHomePage extends StatelessWidget {
           //   title: Text('7.00 – 7.53 AM'),
           //   url: 'https://web.archive.org/web/20091022095316/http://www.700753am.com/',
           // ),
-          _buildLinkListTile(null, AppStrings.collectsReviewsTitle, AppStrings.collectsReviewsUrl),
-          _buildLinkListTile(null, AppStrings.poeziiTitle, AppStrings.poeziiUrl),
-          _buildLinkListTile(null, AppStrings.book700753AMTitle, AppStrings.book700753AMUrl),
+          _buildLinkListTile(null, AppStrings.collectsReviewsTitle,
+              AppStrings.collectsReviewsUrl),
+          _buildLinkListTile(
+              null, AppStrings.poeziiTitle, AppStrings.poeziiUrl),
+          _buildLinkListTile(
+              null, AppStrings.book700753AMTitle, AppStrings.book700753AMUrl),
           Divider(),
-          _buildLinkListTile(CustomIcons.github_circled, AppStrings.github1Title, AppStrings.github1Url),
-          _buildLinkListTile(CustomIcons.github_circled, AppStrings.github2Title, AppStrings.github2Url),
-          _buildLinkListTile(CustomIcons.linkedin_circled, AppStrings.linkedinTitle, AppStrings.linkedinUrl),
-          _buildLinkListTile(CustomIcons.facebook_circled, AppStrings.facebookTitle, AppStrings.facebookUrl),
+          _buildLinkListTile(CustomIcons.github_circled,
+              AppStrings.github1Title, AppStrings.github1Url),
+          _buildLinkListTile(CustomIcons.github_circled,
+              AppStrings.github2Title, AppStrings.github2Url),
+          _buildLinkListTile(CustomIcons.linkedin_circled,
+              AppStrings.linkedinTitle, AppStrings.linkedinUrl),
+          _buildLinkListTile(CustomIcons.facebook_circled,
+              AppStrings.facebookTitle, AppStrings.facebookUrl),
         ],
       ),
     );

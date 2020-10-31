@@ -8,7 +8,7 @@ class HomeFeaturesTab extends StatelessWidget {
     Key key,
   }) : super(key: key);
 
-  final YamlList data;
+  final List data;
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +22,15 @@ class HomeFeaturesTab extends StatelessWidget {
                 child: ListTile(
                   title: Text(
                     'My works and I have been featured on',
-                    style: Theme.of(context).textTheme.subtitle1.copyWith(fontWeight: FontWeight.bold),
+                    style: Theme.of(context)
+                        .textTheme
+                        .subtitle1
+                        .copyWith(fontWeight: FontWeight.bold),
                   ),
                 ),
               )
             : ListTile(
-                title: Text(data[index - 1]['title']),
+                title: Text(data[index - 1]['name']),
                 subtitle: Text(data[index - 1]['country']),
                 onTap: () => launchUrl(data[index - 1]['url']),
               );
