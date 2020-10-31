@@ -4,34 +4,12 @@ import 'package:horatiu_me/common/custom_icons.dart';
 import 'package:horatiu_me/pages/home_features_tab.dart';
 import 'package:horatiu_me/pages/home_intro_tab.dart';
 import 'package:horatiu_me/utils/utils.dart';
-import 'package:horatiu_me/widgets/link_list_tile.dart';
-import 'package:yaml/yaml.dart';
 
 import 'home_works_tab.dart';
 
 class MyHomePage extends StatelessWidget {
-  Future<List> _loadFeatures(BuildContext context) async {
-    final data =
-        await DefaultAssetBundle.of(context).loadString('data/features.yaml');
-    final YamlList mapData = loadYaml(data);
-    // print(mapData);
-    // print(mapData.runtimeType);
-    //
-    // mapData.nodes.forEach((YamlNode node) {
-    //   print((node as YamlMap)['name']);
-    // });
-
-    List shuffledData = List.from(mapData);
-    // shuffledData.shuffle();
-    return shuffledData;
-    // mapData.shuffle();
-    // return mapData;
-  }
-
   @override
   Widget build(BuildContext context) {
-    // YamlList featuresData = _loadFeatures(context);
-
     return DefaultTabController(
       length: 3,
       child: Scaffold(
@@ -43,16 +21,7 @@ class MyHomePage extends StatelessWidget {
             HomeIntroTab(),
             // HomeWordsTab(),
             HomeWorksTab(),
-            FutureBuilder<List>(
-              future: _loadFeatures(context),
-              builder: (BuildContext context, AsyncSnapshot<List> snapshot) {
-                if (snapshot.hasData) {
-                  return HomeFeaturesTab(snapshot.data);
-                } else {
-                  return CircularProgressIndicator();
-                }
-              },
-            ),
+            HomeFeaturesTab(),
           ],
         ),
         floatingActionButton: _buildFAB(),
