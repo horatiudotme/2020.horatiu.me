@@ -10,6 +10,29 @@ import 'home_works_tab.dart';
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        if (constraints.maxWidth > 600) {
+          return _buildWrapper(context, constraints);
+        } else {
+          return _buildMain(context);
+        }
+      },
+    );
+  }
+
+  Widget _buildWrapper(BuildContext context, BoxConstraints constraints) {
+    return Container(
+      color: Color(0xFF111111),
+      padding: EdgeInsets.symmetric(horizontal: (constraints.maxWidth - 411) / 2),
+      child: Material(
+        elevation: 8.0,
+        child: _buildMain(context),
+      ),
+    );
+  }
+
+  Widget _buildMain(BuildContext context) {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
