@@ -11,10 +11,10 @@ const RESOURCES = {
 "assets/FontManifest.json": "75a495027d6e8256365e868726d54dff",
 "assets/AssetManifest.json": "c2fd37bf4bcbc294e7c4af6e7e25700e",
 "manifest.json": "165b930e2b352c9d1fc833dd18ff63c5",
-"main.dart.js": "0d9a59b1eff9480aa4cdf60266034ceb",
+"main.dart.js": "11422d983014326238c2487f18702437",
 "version.json": "b931bceb0721b03a3d19bde34d4aad1a",
-"index.html": "52dd1384def7d3b5241330237c66ab43",
-"/": "52dd1384def7d3b5241330237c66ab43",
+"index.html": "5f813b1bede509a020a2265986827c28",
+"/": "5f813b1bede509a020a2265986827c28",
 "icons/horatiu-tanescu-512.png": "94d6fff302f7cb8e62e6c1f1ae28a4ef",
 "icons/horatiu-tanescu-192.png": "6282777941e12e730c9e9bc0625e67cb"
 };
