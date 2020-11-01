@@ -6,6 +6,10 @@ class AppStrings {
   static const String newTooltip = 'Featured app';
   static const String newUrl = 'https://www.aurelitec.com/colorveil/windows/';
 
+  //#region Drawer
+
+  static const String drawerTitle = 'More links';
+
   static const String collectsReviewsTitle = 'horatiu.collects.reviews';
   static const String collectsReviewsUrl = 'https://horatiu.collects.reviews';
 
@@ -26,4 +30,6 @@ class AppStrings {
 
   static const String facebookTitle = 'Facebook';
   static const String facebookUrl = 'https://www.facebook.com/horatiuaurelian';
+
+  //#endregion
 }
