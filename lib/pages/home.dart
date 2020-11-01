@@ -1,3 +1,7 @@
+// Copyright 2020 Horatiu Tanescu. All rights reserved.
+// Use of this source code is governed by the license that can be
+// found in the LICENSE file.
+
 import 'package:flutter/material.dart';
 
 import 'package:horatiu_me/common/app_strings.dart';
@@ -13,98 +17,62 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  static const double largeScreenBreakpoint = 1024.0;
+  static const double maxTabViewWidth = 400.0;
+
+  /// The list of available tabs.
   final List<Tab> tabs = <Tab>[
     Tab(text: AppStrings.introTabTitle),
     Tab(text: AppStrings.worksTabTitle),
     Tab(text: AppStrings.featuresTabTitle),
   ];
 
+  /// The current tab index.
   int _currentTabIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth > 600) {
-          // return _buildWrapper(context, constraints);
-          return _buildLarge2(context);
+        if (constraints.maxWidth >= largeScreenBreakpoint) {
+          return _buildColumnLayout(context);
         } else {
-          return _buildMain(context);
+          return _buildTabLayout(context);
         }
       },
     );
   }
 
-  Widget _buildMain(BuildContext context) {
+  /// Builds the tabbed layout on small and medium screens.
+  Widget _buildTabLayout(BuildContext context) {
     return DefaultTabController(
       length: tabs.length,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(AppStrings.siteName),
+          title: const Text(AppStrings.siteName),
           bottom: TabBar(tabs: tabs),
         ),
         endDrawer: AppDrawer(),
-        body: TabBarView(
-          children: [
-            HomeIntroTab(),
-            HomeWorksTab(),
-            HomeFeaturesTab(),
-          ],
+        body: Align(
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: maxTabViewWidth),
+            child: TabBarView(
+              children: [
+                HomeIntroTab(),
+                HomeWorksTab(),
+                HomeFeaturesTab(),
+              ],
+            ),
+          ),
         ),
         floatingActionButton: _buildFAB(),
       ),
     );
   }
 
-  Widget _buildLarge2(BuildContext context) {
-    return DefaultTabController(
-      length: tabs.length,
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text(AppStrings.siteName),
-          bottom: TabBar(tabs: tabs),
-        ),
-        endDrawer: AppDrawer(),
-        body: TabBarView(
-          children: [
-            Row(
-              children: [
-                Expanded(child: HomeIntroTab()),
-                Spacer(),
-                Spacer(),
-              ],
-            ),
-            Row(
-              children: [
-                Spacer(),
-                Expanded(child: HomeWorksTab()),
-                Spacer(),
-              ],
-            ),
-            Row(
-              children: [
-                Spacer(),
-                Spacer(),
-                Expanded(child: HomeFeaturesTab()),
-              ],
-            ),
-          ],
-        ),
-        floatingActionButton: _buildFAB(),
-      ),
-    );
-  }
-
-  Widget _buildTabContentOnLarge2(int index, Widget child) {
-    return Expanded(
-      child: Container(
-        color: _currentTabIndex == index ? Colors.grey[200] : null,
-        child: child,
-      ),
-    );
-  }
-
-  Widget _buildLarge(BuildContext context) {
+  /// Builds the column layout on large screens.
+  Widget _buildColumnLayout(BuildContext context) {
     return DefaultTabController(
       length: tabs.length,
       child: Builder(
@@ -119,15 +87,15 @@ class _MyHomePageState extends State<MyHomePage> {
           });
           return Scaffold(
             appBar: AppBar(
-              title: Text(AppStrings.siteName),
+              title: const Text(AppStrings.siteName),
               bottom: TabBar(tabs: tabs),
             ),
             endDrawer: AppDrawer(),
             body: Row(
               children: [
-                _buildTabContentOnLarge(0, HomeIntroTab()),
-                _buildTabContentOnLarge(1, HomeWorksTab()),
-                _buildTabContentOnLarge(2, HomeFeaturesTab()),
+                _buildTabColumn(0, HomeIntroTab()),
+                _buildTabColumn(1, HomeWorksTab()),
+                _buildTabColumn(2, HomeFeaturesTab()),
               ],
             ),
             floatingActionButton: _buildFAB(),
@@ -137,7 +105,8 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Widget _buildTabContentOnLarge(int index, Widget child) {
+  /// Builds the tab column with the specified [index] and [child].
+  Widget _buildTabColumn(int index, Widget child) {
     return Expanded(
       child: Container(
         color: _currentTabIndex == index ? Colors.grey[200] : null,
@@ -146,6 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  /// Builds the Floating Action Button.
   Widget _buildFAB() {
     return FloatingActionButton(
       onPressed: () => launchUrl(AppStrings.mailtoUrl),
