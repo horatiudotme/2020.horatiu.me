@@ -39,5 +39,8 @@ class AppStrings {
   static const String facebookTitle = 'Facebook';
   static const String facebookUrl = 'https://www.facebook.com/horatiuaurelian';
 
+  static const String builtWithTitle = 'Built with Flutter';
+  static const String builtWithUrl = 'https://github.com/horatiudotme/horatiu.me';
+
   //#endregion
 }

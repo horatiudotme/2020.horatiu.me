@@ -13,17 +13,22 @@ class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: ListView(
-        children: <Widget>[
-          _buildDrawerHeader(context),
-          _buildLinkListTile(null, AppStrings.collectsReviewsTitle, AppStrings.collectsReviewsUrl),
-          _buildLinkListTile(null, AppStrings.poeziiTitle, AppStrings.poeziiUrl),
-          _buildLinkListTile(null, AppStrings.book700753AMTitle, AppStrings.book700753AMUrl),
-          Divider(),
-          _buildLinkListTile(CustomIcons.github_circled, AppStrings.github1Title, AppStrings.github1Url),
-          _buildLinkListTile(CustomIcons.github_circled, AppStrings.github2Title, AppStrings.github2Url),
-          _buildLinkListTile(CustomIcons.linkedin_circled, AppStrings.linkedinTitle, AppStrings.linkedinUrl),
-          _buildLinkListTile(CustomIcons.facebook_circled, AppStrings.facebookTitle, AppStrings.facebookUrl),
+      child: CustomScrollView(
+        slivers: <Widget>[
+          SliverList(
+            delegate: SliverChildListDelegate([
+              _buildDrawerHeader(context),
+              _buildLinkTile(AppStrings.collectsReviewsTitle, AppStrings.collectsReviewsUrl),
+              _buildLinkTile(AppStrings.poeziiTitle, AppStrings.poeziiUrl),
+              _buildLinkTile(AppStrings.book700753AMTitle, AppStrings.book700753AMUrl),
+              Divider(),
+              _buildLinkTile(AppStrings.github1Title, AppStrings.github1Url, icon: Icon(CustomIcons.github)),
+              _buildLinkTile(AppStrings.github2Title, AppStrings.github2Url, icon: Icon(CustomIcons.github)),
+              _buildLinkTile(AppStrings.linkedinTitle, AppStrings.linkedinUrl, icon: Icon(CustomIcons.linkedin)),
+              _buildLinkTile(AppStrings.facebookTitle, AppStrings.facebookUrl, icon: Icon(CustomIcons.facebook)),
+            ]),
+          ),
+          _buildFlutterTile(context),
         ],
       ),
     );
@@ -43,11 +48,27 @@ class AppDrawer extends StatelessWidget {
   }
 
   /// Builds a list tile that opens a URL when clicked.
-  Widget _buildLinkListTile(IconData icon, String title, String url) {
+  Widget _buildLinkTile(String title, String url, {Widget icon, TextStyle style}) {
     return ListTile(
-      title: Text(title),
-      leading: icon != null ? Icon(icon) : null,
+      title: Text(title, style: style),
+      leading: icon,
       onTap: () => launchUrl(url),
+    );
+  }
+
+  /// Builds the _Built with Flutter_ list tile.
+  Widget _buildFlutterTile(BuildContext context) {
+    return SliverFillRemaining(
+      hasScrollBody: false,
+      child: Align(
+        alignment: Alignment.bottomRight,
+        child: _buildLinkTile(
+          AppStrings.builtWithTitle,
+          AppStrings.builtWithUrl,
+          icon: FlutterLogo(),
+          style: Theme.of(context).textTheme.caption,
+        ),
+      ),
     );
   }
 }

@@ -11,11 +11,11 @@
 ///      fonts:
 ///       - asset: fonts/CustomIcons.ttf
 ///
-/// 
+///
 /// * Brandico, (C) 2012 by Vitaly Puzrin
 ///         Author:    Crowdsourced, for Fontello project
 ///         License:   SIL (http://scripts.sil.org/OFL)
-///         Homepage:  
+///         Homepage:
 ///
 import 'package:flutter/widgets.dart';
 
@@ -25,7 +25,7 @@ class CustomIcons {
   static const _kFontFam = 'CustomIcons';
   static const _kFontPkg = null;
 
-  static const IconData github_circled = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData facebook_circled = IconData(0xf30d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData linkedin_circled = IconData(0xf319, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData github = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData facebook = IconData(0xf30d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData linkedin = IconData(0xf319, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
