@@ -6,6 +6,14 @@ class AppStrings {
   static const String newTooltip = 'Featured app';
   static const String newUrl = 'https://www.aurelitec.com/colorveil/windows/';
 
+  //#region App Bar
+
+  static const String introTabTitle = 'Intro';
+  static const String worksTabTitle = 'Works';
+  static const String featuresTabTitle = 'Features';
+
+  //#endregion
+
   //#region Drawer
 
   static const String drawerTitle = 'More links';
