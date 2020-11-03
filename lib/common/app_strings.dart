@@ -43,4 +43,15 @@ class AppStrings {
   static const String builtWithUrl = 'https://github.com/horatiudotme/horatiu.me';
 
   //#endregion
+
+  //#region Features
+
+  static const String featuresTitle = 'My works have been featured on';
+  static const String featuresSubtitle = 'CNN, EL PAIS, Entrepreneur, PC Magazine, PC World, '
+      'SC Magazine, Revision3, The Australian Financial Review, The Guardian, The New York Times, The Washington Post, '
+      'VICE, Yandex, Yahoo Finance, and more';
+  static const String featuresAlsoTitle = 'Also on';
+
+  //#endregion
+
 }
