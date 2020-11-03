@@ -2,6 +2,12 @@ import 'feature_item.dart';
 
 const List<FeatureItem> kMoreFeatures = [
   const FeatureItem(
+    name: 'Bihor Just',
+    country: 'Romania',
+    url:
+        'https://www.bihorjust.ro/povestea-antreprenorului-oradean-care-ajuns-sa-livreze-programe-it-pentru-departamentul-de-justitie-al-sua-si-serviciile-secrete-ale-armatei-franceze/',
+  ),
+  const FeatureItem(
     name: 'Blogsdna',
     country: 'India',
     url:
@@ -70,6 +76,11 @@ const List<FeatureItem> kMoreFeatures = [
     url: 'https://www.nirmaltv.com/2009/12/21/how-to-check-for-dead-pixels-on-lcd-monitors/',
   ),
   const FeatureItem(
+    name: 'Tekmoloji',
+    country: 'Turkey',
+    url: 'https://tekmoloji.com/ekrandaki-olu-bir-piksel-nasil-duzeltilir-2963/',
+  ),
+  const FeatureItem(
     name: 'YourLifeUpdated',
     country: 'Italy',
     url: 'https://www.yourlifeupdated.net/guide/come-riparare-i-pixel-bruciati-su-qualsiasi-display/',
@@ -78,5 +89,5 @@ const List<FeatureItem> kMoreFeatures = [
     name: 'Zigg',
     country: 'Brazil',
     url: 'https://www.zigg.com.br/downloads/colortypist',
-  )
+  ),
 ];

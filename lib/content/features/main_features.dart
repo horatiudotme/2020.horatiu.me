@@ -24,6 +24,11 @@ const List<FeatureItem> kMainFeatures = [
         'https://adevarul.ro/locale/oradea/programe-out-of-the-box-calculatoare-realizate-informatician-roman-recomandate-lifehacker-1_50ada3517c42d5a6639881db/index.html',
   ),
   const FeatureItem(
+    name: 'Appuals',
+    country: 'United Kingdom',
+    url: 'https://appuals.com/the-5-best-software-to-fix-dead-stuck-pixels-on-your-windows-pc/',
+  ),
+  const FeatureItem(
     name: 'Baidu Encyclopedia',
     country: 'China',
     url:
@@ -107,6 +112,11 @@ const List<FeatureItem> kMainFeatures = [
     country: 'Spain',
     url:
         'https://www.elespanol.com/omicrono/software/20160124/descubrir-reparar-pixeles-atascados-muertos-monitor/96990347_0.html',
+  ),
+  const FeatureItem(
+    name: 'EL PAÍS',
+    country: 'Spain',
+    url: 'https://cincodias.elpais.com/cincodias/2017/02/03/lifestyle/1486147156_449041.html',
   ),
   const FeatureItem(
     name: 'Entrepreneur',
@@ -224,6 +234,11 @@ const List<FeatureItem> kMainFeatures = [
     url: 'https://archive.org/details/pc_space_09-2001',
   ),
   const FeatureItem(
+    name: 'Quantrimang.com',
+    country: 'Vietnam',
+    url: 'https://quantrimang.com/xu-ly-vet-xuoc-va-diem-chet-tren-man-hinh-laptop-48259',
+  ),
+  const FeatureItem(
     name: 'Racunalo.com',
     country: 'Croatia',
     url:
@@ -317,6 +332,11 @@ const List<FeatureItem> kMainFeatures = [
     url: 'https://www.vector.co.jp/magazine/softnews/140326/n1403261_reviewer.html',
   ),
   const FeatureItem(
+    name: 'VICE',
+    country: 'United States',
+    url: 'https://www.vice.com/en/article/ez8zn7/what-is-a-dead-pixel-anyway',
+  ),
+  const FeatureItem(
     name: 'Vnunet',
     country: 'United Kingdom',
     url: 'https://web.archive.org/web/20020209141736/http://www.vnunet.com/Download/1115897',
@@ -336,6 +356,12 @@ const List<FeatureItem> kMainFeatures = [
     country: 'Spain',
     url:
         'https://www.xatakandroid.com/personalizacion/cinco-aplicaciones-para-poner-fondos-de-pantalla-negros-en-moviles-con-pantalla-amoled',
+  ),
+  const FeatureItem(
+    name: 'Yandex',
+    country: 'Russia',
+    url:
+        'https://zen.yandex.ru/media/mobilenews/kak-pochinit-bityi-piksel-na-liubom-ustroistve-5b7555733cef5300acf8c887',
   ),
   const FeatureItem(
     name: 'Yahoo Finance',
@@ -367,5 +393,5 @@ const List<FeatureItem> kMainFeatures = [
     name: 'Živé.sk',
     country: 'Slovakia',
     url: 'https://zive.aktuality.sk/clanok/133655/novy-softver-expresna-praca-s-archivmi-sledujeme-digitalnu-tv/',
-  )
+  ),
 ];
